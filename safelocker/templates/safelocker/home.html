@@ -1,37 +1,57 @@
-{% extends 'main.html' %}
-{% load static %}
-{% block title %} Home - Password Locker {% endblock %}
-
-{% block content %}
+{% extends 'main.html' %} {% load static %} {% block title %} Home - Password
+Locker {% endblock %} {% block content %}
 <div class="container">
-    <div class="row">
-        {% if not request.user.is_authenticated %}
-        <div class="col-12 col-lg-6">
-            <img class="img-fluid" src="{% static 'safelocker/img/main-home-1.png' %}"
-                 alt="home-image from Web PNGs by Vecteezy">
-        </div>
-
-        <div class="col-12 col-lg-6 p-3 m-auto">
-            <p class="main-intro-home">Password Locker welcomes you to its world.</p>
-            <p class="secondary-intro-home">Keep your password with us @ zero cost. <br>
-                <a class="secondary-intro-link" href="{% url 'register-page' %}">Register</a> today or
-                <a class="secondary-intro-link" href="{% url 'login-page' %}">Login</a> if you are a returning user.</p>
-        </div>
-        {% else %}
-        <div class="col-12 col-lg-6">
-            <img class="img-fluid" src="{% static 'safelocker/img/login.png' %}"
-                 alt="home-image from Web PNGs by Vecteezy">
-        </div>
-
-        <div class="col-12 col-lg-6 p-3 m-auto">
-            <p class="main-intro-home">Hi {{ user.first_name }}</p>
-            <p class="secondary-intro-home">What will you like to do today? <br>Choose from the option below to
-                proceed.
-            </p>
-            <a class="btn btn-outline-dark" href="{% url 'user-locker' %}" role="button">View Locker</a>
-            <a class="btn btn-outline-dark" href="{% url 'locker-form' %}" role="button">Add to Locker</a>
-        </div>
-        {% endif %}
+  <div class="row">
+    {% if not request.user.is_authenticated %}
+    <div class="col-12 col-lg-6">
+      <img
+        class="img-fluid"
+        src="{% static 'safelocker/img/main-home-1.png' %}"
+        alt="home-image from Web PNGs by Vecteezy"
+      />
     </div>
+
+    <div class="col-12 col-lg-6 p-3 m-auto">
+      <p class="main-intro-home">Password Locker welcomes you to its world.</p>
+      <p class="secondary-intro-home">
+        Keep your password with us @ zero cost. <br />
+        <a class="secondary-intro-link" href="{% url 'register-page' %}"
+          >Register</a
+        >
+        today or
+        <a class="secondary-intro-link" href="{% url 'login-page' %}">Login</a>
+        if you are a returning user.
+      </p>
+    </div>
+    {% else %}
+    <div class="col-12 col-lg-6">
+      <img
+        class="img-fluid"
+        src="{% static 'safelocker/img/login.png' %}"
+        alt="home-image from Web PNGs by Vecteezy"
+      />
+    </div>
+
+    <div class="col-12 col-lg-6 p-3 m-auto">
+      <p class="main-intro-home">Hi {{ user.first_name }}</p>
+      <p class="secondary-intro-home">
+        What will you like to do today? <br />Choose from the option below to
+        proceed.
+      </p>
+      <a
+        class="btn btn-outline-dark"
+        href="{% url 'user-locker' %}"
+        role="button"
+        >View Locker</a
+      >
+      <a
+        class="btn btn-outline-dark"
+        href="{% url 'locker-form' %}"
+        role="button"
+        >Add to Locker</a
+      >
+    </div>
+    {% endif %}
+  </div>
 </div>
 {% endblock %}

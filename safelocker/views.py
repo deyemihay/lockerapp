@@ -12,18 +12,6 @@ def home(request):
     return render(request, 'safelocker/home.html')
 
 
-def register_user(request):
-    form = RegistrationForm()
-    if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Your account has registered successfully, please login.')
-            return redirect('login-page')
-    context = {'form': form}
-    return render(request, 'safelocker/register.html', context)
-
-
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -44,6 +32,20 @@ def login_user(request):
 
     context = {}
     return render(request, 'safelocker/login.html', context)
+
+
+def register_user(request):
+    form = RegistrationForm()
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save(commit=False)
+            messages.success(request, 'Your account has registered successfully, please login.')
+            return redirect('login-page')
+        else:
+            messages.error(request, 'There is an error, check the details and try again.')
+    context = {'form': form}
+    return render(request, 'safelocker/register.html', context)
 
 
 def logout_user(request):

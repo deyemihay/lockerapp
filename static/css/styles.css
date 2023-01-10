@@ -40,12 +40,23 @@ nav {
   font-weight: 900;
   font-size: 3.1rem;
 }
+
 .secondary-intro-home {
   font-weight: 500;
   font-size: 1.5rem;
 }
+@media (max-width: 480px) {
+  .main-intro-home {
+    font-weight: 700;
+    font-size: 2.3rem;
+  }
+  .secondary-intro-home {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+}
 .secondary-intro-link {
-  color: #ff0000;
+  color: #a70000;
 }
 
 /*===== START USER-LOCKER =====*/
@@ -73,7 +84,6 @@ nav {
     #a2cdc2
   );
 }
-.item-selected-header
 
 /*===== START LOGIN / REGISTER FORM =====*/
 .profile-image-pic {
@@ -88,7 +98,6 @@ nav {
 
 a {
   text-decoration: none;
-  color: #bb998c;
 }
 /*===== DELETE-PAGE =====*/
 .question-delete {
