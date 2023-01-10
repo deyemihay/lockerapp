@@ -1,49 +1,77 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to right, #94798b, #9a89a4, #989abd, #92add1, #89c1e0, #91c8e4, #9ad0e8, #a3d7ec, #b7d4ea, #c6d3e4, #d0d3dc, #d4d4d4);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #94798b,
+    #9a89a4,
+    #989abd,
+    #92add1,
+    #89c1e0,
+    #91c8e4,
+    #9ad0e8,
+    #a3d7ec,
+    #b7d4ea,
+    #c6d3e4,
+    #d0d3dc,
+    #d4d4d4
+  );
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 /*===== FOOTER =====*/
 footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 /*===== START NAVBAR =====*/
 nav {
-    font-weight: 500;
-    font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 .logo {
-    width: 90px;
+  width: 90px;
 }
 .user-name {
-    color: brown;
+  color: brown;
 }
 
 /*===== START MAIN-HOME =====*/
 .main-intro-home {
-    font-weight: 900;
-    font-size: 3.1rem;
+  font-weight: 900;
+  font-size: 3.1rem;
 }
 .secondary-intro-home {
-    font-weight: 500;
-    font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 .secondary-intro-link {
-    color: #FF0000;
+  color: #ff0000;
 }
 
 /*===== START USER-LOCKER =====*/
 .locker-items {
-    background-image: linear-gradient(to left top, #7783d1, #539dd8, #55b1d1, #78c1c6, #a2cdc2);
+  background-image: linear-gradient(
+    to left top,
+    #7783d1,
+    #539dd8,
+    #55b1d1,
+    #78c1c6,
+    #a2cdc2
+  );
 }
 
 /*===== START LOCKER-ITEM =====*/
 .item-selected {
-    min-width: 50%;
-    height: 100%;
-    background-image: linear-gradient(to left top, #7783d1, #539dd8, #55b1d1, #78c1c6, #a2cdc2);
+  min-width: 50%;
+  height: 100%;
+  background-image: linear-gradient(
+    to left top,
+    #7783d1,
+    #539dd8,
+    #55b1d1,
+    #78c1c6,
+    #a2cdc2
+  );
 }
 .item-selected-header
 
@@ -60,6 +88,7 @@ nav {
 
 a {
   text-decoration: none;
+  color: #bb998c;
 }
 /*===== DELETE-PAGE =====*/
 .question-delete {
