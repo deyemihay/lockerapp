@@ -73,6 +73,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'passwordLocker.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://lockerapp.up.railway.app']
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -142,4 +144,3 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://lockerapp.up.railway.app']
