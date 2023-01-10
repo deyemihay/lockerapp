@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %} Item {% endblock %}
+
+{% block content %}
+<h1 class="item-selected-header mt-3">YOUR SELECTED ITEM</h1>
+<hr>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a class="btn btn-sm btn-secondary" href="{% url 'edit-item' item_select.id %}" role="button">edit</a>
+    <a class="btn btn-sm btn-danger" href="{% url 'delete-item' item_select.id %}" role="button">delete</a>
+</div>
+<div class="item-selected p-3 mt-1">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Site Name</th>
+            <th scope="col">{{ item_select.site_name }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Site URL</td>
+            <td>{{ item_select.site_url }}</td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td>{{ item_select.username }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{ item_select.email }}</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>{{ item_select.password }}</td>
+        </tr>
+        <tr>
+            <td>Date Created</td>
+            <td>{{ item_select.created }}</td>
+        </tr>
+        <tr>
+            <td>Date Updated</td>
+            <td>{{ item_select.updated }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end mt-1">
+<a class="btn btn-md btn-primary" href="{% url 'user-locker' %}" role="button">back</a>
+</div>
+{% endblock %}
