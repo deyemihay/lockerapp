@@ -39,7 +39,7 @@ def register_user(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            form.save(commit=False)
+            form.save()
             messages.success(request, 'Your account has registered successfully, please login.')
             return redirect('login-page')
         else:
